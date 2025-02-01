@@ -11,7 +11,7 @@ export default async function ServiceDetails({ params }) {
                 <img
                     src="/assets/images/banner/4.jpg"
                     alt="Service Details"
-                    className="w-full h-56 md:h-64 object-cover"
+                    className="w-full h-56 md:h-[300px] object-cover"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-start pl-8">
                     <h1 className="text-white text-3xl md:text-4xl font-extrabold">Service Details</h1>
