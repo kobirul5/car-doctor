@@ -12,7 +12,7 @@ const Navbar = () => {
     </>
 
     return (
-        <div className="navbar backdrop-blur-md fixed top-0">
+        <div className="navbar backdrop-blur-md fixed top-0 z-50">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -36,7 +36,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <Link href={"/"} className="text-xl">
-                    <Image src={"/assets/logo.svg"} width={87} height={87}/>
+                    <Image src={"/assets/logo.svg"} alt="logo" width={87} height={87}/>
                 </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
