@@ -1,8 +1,17 @@
+"use client"
+
+import { registerUser } from "@/app/actions/auth/registerUser";
 
 export default function RegisterForm() {
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        
+        const form = e.target;
+        const email = form.email.value;
+        const name = form.name.value;
+        const password = form.password.value;
+        const formData = {email, name, password}
+        registerUser(formData)
+        console.log(formData)
       };
 
     return (
@@ -13,7 +22,7 @@ export default function RegisterForm() {
                 </label>
                 <input
                     type="text"
-                    id="name"
+                    name="name"
                     placeholder="Your name"
                     className="w-full rounded-lg border border-gray-300 p-2 focus:border-blue-500 focus:outline-none"
                 />
@@ -25,7 +34,7 @@ export default function RegisterForm() {
                 </label>
                 <input
                     type="email"
-                    id="email"
+                    name="email"
                     placeholder="Your email"
                     className="w-full rounded-lg border border-gray-300 p-2 focus:border-blue-500 focus:outline-none"
                 />
@@ -37,7 +46,7 @@ export default function RegisterForm() {
                 </label>
                 <input
                     type="password"
-                    id="password"
+                    name="password"
                     placeholder="Your password"
                     className="w-full rounded-lg border border-gray-300 p-2 focus:border-blue-500 focus:outline-none"
                 />

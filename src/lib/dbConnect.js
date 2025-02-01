@@ -1,7 +1,8 @@
 import { MongoClient, ServerApiVersion } from 'mongodb'
 
 export const collectionObjects = {
-    serviceCollection: "services"
+    serviceCollection: "services",
+    userCollection: "users"
 }
 
 
