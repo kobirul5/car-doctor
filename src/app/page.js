@@ -1,9 +1,12 @@
+import ServicesSection from "./home/ServicesSection";
 
 
-export default function Home() {
+export default async function Home() {
+
   return (
-    <div>
-      app run
+    <div className="pt-40">
+      <ServicesSection></ServicesSection>
+
     </div>
   );
 }
